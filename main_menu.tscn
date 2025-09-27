@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://lk36mrneral6"]
+
+[ext_resource type="Texture2D" uid="uid://dc155oldv7ep2" path="res://assets/gfx/splash/background_layer_1.png" id="1_06t4h"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="."]
+position = Vector2(577, 324.5)
+scale = Vector2(3.60625, 3.5944445)
+texture = ExtResource("1_06t4h")
