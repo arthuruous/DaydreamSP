@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://lk36mrneral6"]
+
+[ext_resource type="Script" uid="uid://b3kket56nlims" path="res://Menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://dc155oldv7ep2" path="res://assets/gfx/splash/background_layer_1.png" id="2_7vrkn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7vrkn"]
+
+[sub_resource type="Theme" id="Theme_fu7sn"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323)
+scale = Vector2(3.5968747, 3.5777776)
+texture = ExtResource("2_7vrkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 395.0
+offset_top = -50.5
+offset_right = -428.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="HelpButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Help"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+texture_filter = 6
+texture_repeat = 2
+material = SubResource("ShaderMaterial_7vrkn")
+layout_mode = 0
+offset_left = 503.0
+offset_top = 154.0
+offset_right = 614.0
+offset_bottom = 187.0
+theme = SubResource("Theme_fu7sn")
+theme_override_colors/search_result_color = Color(0.4855981, 0.00034938112, 0.5372836, 1)
+theme_override_colors/search_result_border_color = Color(0.3, 0.3, 0.3, 0.4)
+theme_override_colors/caret_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 0)
+theme_override_colors/selection_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_readonly_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/font_placeholder_color = Color(0.875, 0.875, 0.875, 0.6)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/current_line_color = Color(0.25, 0.25, 0.26, 0.8)
+theme_override_colors/word_highlighted_color = Color(0.5, 0.5, 0.5, 0.25)
+text = "DaydreamSP	"
+placeholder_text = "DaydreamSP"
+editable = false
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
