@@ -77,14 +77,12 @@ func die() -> void:
 			parent_node.add_child(new_enemy)
 			new_enemy.global_position = global_position + offset
 			
-			# **reset completo do clone**
 			new_enemy.health = 100  # vida cheia
 			new_enemy.can_attack = true
 			new_enemy.target = null
 			new_enemy.set_process(true)
 			new_enemy.set_physics_process(true)
 			
-			# encontrar o player novamente
 			var players = get_tree().get_nodes_in_group("player")
 			if players.size() > 0:
 				new_enemy.target = players[0]

@@ -17,7 +17,6 @@ func _ready() -> void:
 	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
-	# animações de movimento
 	if abs(velocity.x) > 1:
 		if animated_sprite_2d:
 			animated_sprite_2d.animation = "running"
@@ -25,30 +24,25 @@ func _physics_process(delta: float) -> void:
 		if animated_sprite_2d:
 			animated_sprite_2d.animation = "default"
 
-	# gravidade
 	if not is_on_floor():
 		velocity.y += ProjectSettings.get_setting("physics/2d/default_gravity") * delta
 		if animated_sprite_2d:
 			animated_sprite_2d.animation = "jumping"
 
-	# pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# movimento horizontal
 	var dir := Input.get_axis("left", "right")
 	if dir != 0:
 		velocity.x = dir * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED * delta)
 
-	move_and_slide()  # ✅ Godot 4 não retorna nada
+	move_and_slide() 
 
-	# flip sprite
 	if animated_sprite_2d:
 		animated_sprite_2d.flip_h = velocity.x < 0
 
-	# ataque
 	if Input.is_action_just_pressed("fight"):
 		attack()
 
