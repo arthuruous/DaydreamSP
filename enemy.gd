@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var speed: float = 150.0
+@export var speed: float = 50.0
 @export var health: int = 100
 @export var gravity: float = 800.0
 @export var attack_damage: int = 10
-@export var attack_cooldown: float = 1.0
+@export var attack_cooldown: float = 3.0
 @export var attack_range: float = 36.0
 
 @onready var sprite := get_node_or_null("AnimatedSprite2D")
@@ -52,13 +52,16 @@ func _physics_process(delta: float) -> void:
 	if to_player.length() <= attack_range:
 		attack_player()
 
+func allowAttack() -> void:
+	can_attack = true
+
 func attack_player() -> void:
 	if not can_attack: return
 	if target and target.has_method("take_damage"):
 		target.take_damage(attack_damage)
 		can_attack = false
-		await get_tree().create_timer(attack_cooldown).timeout
-		can_attack = true
+		await get_tree().create_timer(2.0).timeout
+		allowAttack()
 
 func take_damage(amount: int) -> void:
 	health -= amount

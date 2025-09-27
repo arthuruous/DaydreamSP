@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdfi7fwhyktws"]
+
+[ext_resource type="Texture2D" uid="uid://d1pqdovbirydf" path="res://green.png" id="1_6or3w"]
+
+[node name="Morte" type="Node"]
+
+[node name="Green" type="Sprite2D" parent="."]
+position = Vector2(572, 338)
+scale = Vector2(1.0295138, 1.0648148)
+texture = ExtResource("1_6or3w")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 492.0
+offset_top = 232.0
+offset_right = 687.0
+offset_bottom = 389.0
+text = "Você foi o sacrificado
+
+Você Morreu
+
+Acabou"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 392.0
+offset_top = 489.0
+offset_right = 798.0
+offset_bottom = 526.0
+text = "Gostou? Quer jogar de novo? Fecha e abre de novo"

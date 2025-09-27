@@ -38,10 +38,6 @@ grow_vertical = 2
 layout_mode = 2
 text = "Start"
 
-[node name="HelpButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Help"
-
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
@@ -73,4 +69,13 @@ text = "DaydreamSP	"
 placeholder_text = "DaydreamSP"
 editable = false
 
+[node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 213.0
+offset_right = 624.0
+offset_bottom = 251.0
+text = "Debug Sacrifice"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
