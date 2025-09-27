@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqu63y20fjuxp"]
+
+[ext_resource type="Texture2D" uid="uid://baejs5lolgldh" path="res://assets/TileMap/Forest/Layer_0006_4.png" id="1_ehcar"]
+[ext_resource type="Texture2D" uid="uid://hh03oq8yul2j" path="res://assets/TileMap/Forest/Layer_0005_5.png" id="2_1afax"]
+[ext_resource type="Texture2D" uid="uid://bqyg8lipvsmlp" path="res://assets/TileMap/Forest/Layer_0002_7.png" id="3_dehky"]
+[ext_resource type="Texture2D" uid="uid://cehtoc672go8m" path="res://assets/TileMap/Forest/Layer_0000_9.png" id="4_frc16"]
+[ext_resource type="Texture2D" uid="uid://ewvjam6yvypv" path="res://assets/TileMap/Forest/Layer_0001_8.png" id="5_r1l1y"]
+[ext_resource type="Texture2D" uid="uid://dxk8f4qtpidp6" path="res://assets/TileMap/Forest/Layer_0003_6.png" id="6_r4yee"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Layer00064" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(578, 155)
+scale = Vector2(1.2392242, 1)
+texture = ExtResource("1_ehcar")
+
+[node name="Layer00055" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 156)
+scale = Vector2(1.2392242, 1)
+texture = ExtResource("2_1afax")
+
+[node name="Layer00027" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 159)
+scale = Vector2(1.25, 1)
+texture = ExtResource("3_dehky")
+
+[node name="Layer00009" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 130)
+scale = Vector2(1.2392242, 1)
+texture = ExtResource("4_frc16")
+
+[node name="Layer00018" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(578, 165)
+scale = Vector2(1.2392242, 1)
+texture = ExtResource("5_r1l1y")
+
+[node name="Layer00036" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 159)
+scale = Vector2(1.2456896, 1)
+texture = ExtResource("6_r4yee")
+
+[node name="Layer00028" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(579, 734)
+scale = Vector2(1.2392242, 1)
+texture = ExtResource("3_dehky")
