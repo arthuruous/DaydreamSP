@@ -14,6 +14,10 @@ config/name="Daydream"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="Daydream"
+
 [rendering]
 
 renderer/rendering_method="mobile"
