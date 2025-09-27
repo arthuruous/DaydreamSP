@@ -26,9 +26,3 @@ shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_h2yge")
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -74.0
-offset_top = -67.0
-offset_right = 175.0
-offset_bottom = -40.0
